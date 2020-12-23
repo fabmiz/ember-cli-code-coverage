@@ -47,6 +47,10 @@
       return;
     }
 
+    if (typeof data === 'string') {
+        data = JSON.parse(data);
+    }
+
     var results = ['Lines', 'Branches', 'Functions', 'Statements']
       .filter(function (name) {
         return name.toLowerCase();
